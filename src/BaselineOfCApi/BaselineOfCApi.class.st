@@ -16,7 +16,7 @@ BaselineOfCApi >> baseline: spec [
 				loads: #( 'PersistentObject' 'LwTestCase' 'PlatformSpecific'
 					   'SystemInterface' 'XFilename' 'Transcript' 'Timestamp'
 					   'PackedString' 'NByteArray' );
-				repository: 'github://lifeware-sa/LwCompatibilityLayer:bubu/src' ].
+				repository: 'github://lifeware-sa/LwCompatibilityLayer/src' ].
 
 		spec
 			package: 'C-API-Common'
