@@ -1,6 +1,6 @@
 Class {
 	#name : #AbstractZlib,
-	#superclass : #PersistentObject,
+	#superclass : #Object,
 	#instVars : [
 		'library',
 		'strm',
@@ -46,10 +46,7 @@ AbstractZlib class >> maxCompressedSize: anInteger [
 
 { #category : #utilities }
 AbstractZlib class >> platformClass [
-	<gs_code: '
-	
-	^GS_zlib1_1_2_11'>
-	^self forLinux: [ PH_zlib1_1_2_11_linux] forWindows: [ PH_zlib1_1_2_11 ]
+	^self forLinux: [PH_zlib1_1_2_11_linux] forWindows: [PH_zlib1_1_2_11]
 ]
 
 { #category : #utilities }
@@ -159,29 +156,6 @@ AbstractZlib >> availOut: anInteger [
 ]
 
 { #category : #private }
-AbstractZlib >> checkZResult: aBoolean [
-	aBoolean ifTrue: [^self].
-	self
-		error: 'Error on zlib function: ' , zResult displayString , ' ['
-				, (self errorMessage) , ']'
-]
-
-{ #category : #private }
-AbstractZlib >> checkZResultOK [
-	^self checkZResult: self isZResultOK
-]
-
-{ #category : #private }
-AbstractZlib >> checkZResultOKOrStreamEnd [
-	^self checkZResult: self isZResultOKOrStreamEnd
-]
-
-{ #category : #private }
-AbstractZlib >> checkZResultOKOrStreamEndOrBufError [
-	^self checkZResult: self isZResultOKOrStreamEndOrBufError
-]
-
-{ #category : #private }
 AbstractZlib >> checksum: aByteArray firstIndex: firstInteger byteLength: lengthInteger currentSum: sumInteger isAdler32: aBoolean [
 	| afterIndex index sum |
 	self initChecksum.
@@ -212,6 +186,29 @@ AbstractZlib >> checksumBlock: aByteArray firstIndex: firstInteger byteLength: l
 	^aBoolean
 		ifTrue: [library adler32: sumInteger _: inBuffer _: lengthInteger]
 		ifFalse: [library crc32: sumInteger _: inBuffer _: lengthInteger]
+]
+
+{ #category : #private }
+AbstractZlib >> checkZResult: aBoolean [
+	aBoolean ifTrue: [^self].
+	self
+		error: 'Error on zlib function: ' , zResult displayString , ' ['
+				, (self errorMessage) , ']'
+]
+
+{ #category : #private }
+AbstractZlib >> checkZResultOK [
+	^self checkZResult: self isZResultOK
+]
+
+{ #category : #private }
+AbstractZlib >> checkZResultOKOrStreamEnd [
+	^self checkZResult: self isZResultOKOrStreamEnd
+]
+
+{ #category : #private }
+AbstractZlib >> checkZResultOKOrStreamEndOrBufError [
+	^self checkZResult: self isZResultOKOrStreamEndOrBufError
 ]
 
 { #category : #private }

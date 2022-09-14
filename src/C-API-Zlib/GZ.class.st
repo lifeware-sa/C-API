@@ -125,7 +125,7 @@ GZ class >> gunzipNew: aByteArray [
 	header := self checkHeader: readStream.
 	headerSize := header key.
 	filename := header value.
-	readStream position: (aByteArray size - 4).
+	readStream position: aByteArray size - 4.
 	size := (readStream next: 4) fromFourBytes.
 	bytes := ByteArray new: size.
 	aStream := bytes writeStream.
