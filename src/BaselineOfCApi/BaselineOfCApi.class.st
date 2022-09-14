@@ -13,7 +13,7 @@ BaselineOfCApi >> baseline: spec [
 
 		spec baseline: 'LwCompatibilityLayer' with: [ 
 			spec
-				loads: #( 'PersistentObject' 'LwTestCase' 'PlatformSpecific'
+				loads: #( 'LwTestCase' 'PlatformSpecific'
 					   'SystemInterface' 'XFilename' 'Transcript' 'Timestamp'
 					   'PackedString' 'NByteArray' );
 				repository: 'github://lifeware-sa/LwCompatibilityLayer/src' ].
