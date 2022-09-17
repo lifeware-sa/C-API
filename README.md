@@ -30,6 +30,25 @@ Metacello new
     load.
 ```
 
+## C-API as a dependency
+
+If you wish to set a dependency to C-API in your application, you simply need to add the following in your baseline:
+
+```Smalltalk
+spec
+    baseline: 'CApi'
+    with: [ spec repository: 'github://lifeware-sa/C-API/src' ].
+```
+
+To depend on a partial version of C-API, you may use:
+
+```Smalltalk
+spec baseline: 'CApi' with: [
+    spec
+        loads: #( 'ZLib' );
+        repository: 'github://lifeware-sa/C-API/src' ].
+```
+
 ## Troubleshooting
 
 ### Primitive failed when calling a library
