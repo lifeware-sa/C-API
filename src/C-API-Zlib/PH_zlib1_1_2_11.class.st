@@ -14,11 +14,6 @@ PH_zlib1_1_2_11 class >> gcMallocStrm [
 	^self gcMalloc: self stream_size
 ]
 
-{ #category : #testing }
-PH_zlib1_1_2_11 class >> isOpenSourceClass [
-	^true
-]
-
 { #category : #accessing }
 PH_zlib1_1_2_11 class >> libName [
 	^self dllClass libName
