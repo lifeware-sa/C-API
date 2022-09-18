@@ -15,7 +15,7 @@ BaselineOfCApi >> baseline: spec [
 			spec
 				loads: #( 'LwTestCase' 'PlatformSpecific'
 					   'SystemInterface' 'XFilename' 'Transcript' 'Timestamp'
-					   'PackedString' 'NByteArray' );
+					   'PackedString' 'NByteArray' 'Random' );
 				repository: 'github://lifeware-sa/LwCompatibilityLayer/src' ].
 
 		spec
