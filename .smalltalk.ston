@@ -9,6 +9,10 @@ SmalltalkCISpec {
     }
   ],
   #testing : {
+    #coverage : {
+      #packages : [ 'C-API.*' ],
+      #format : #lcov
+    },
     #defaultTimeout : 180
   }
 }
