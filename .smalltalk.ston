@@ -1,0 +1,14 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'CApi',
+      #directory : 'src',
+      #platforms : [ #pharo ],
+      #onConflict : #useIncoming,
+      #onUpgrade : #useIncoming
+    }
+  ],
+  #testing : {
+    #defaultTimeout : 180
+  }
+}
