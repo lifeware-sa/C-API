@@ -7,12 +7,13 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ ubuntu-latest ]
         smalltalk: [ Pharo64-11, Pharo64-10, Pharo64-9.0 ]
-    name: ${{ matrix.smalltalk }}
+    name: ${{ matrix.smalltalk }} ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
