@@ -1,5 +1,8 @@
 # Library bindings for Smalltalk 
 
+[![GitHub Workflow Status][github_action_b]][github_action_url]
+[![License][license_b]][license_url]
+
 Available libraries:
  - ZLib
 
@@ -70,3 +73,8 @@ After loading code with Metacello, they are automatically initialized, to initia
 ```Smalltalk
 PH_lib initializeCurrentLibs
 ```
+
+[github_action_b]: https://img.shields.io/github/workflow/status/lifeware-sa/C-API/smalltalkCI/master
+[github_action_url]: https://github.com/lifeware-sa/C-API/actions
+[license_b]: https://img.shields.io/github/license/lifeware-sa/C-API
+[license_url]: LICENSE
