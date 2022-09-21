@@ -3,7 +3,11 @@ name: smalltalkCI
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "15 2 10 * *"
 
 jobs:
   build:
