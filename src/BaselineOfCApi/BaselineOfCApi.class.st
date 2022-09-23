@@ -31,3 +31,8 @@ BaselineOfCApi >> postload: loader package: packageSpec [
 	Dll ensureDlls.
 	PH_lib initializeCurrentLibs
 ]
+
+{ #category : #baselines }
+BaselineOfCApi >> projectClass [
+	^MetacelloCypressBaselineProject
+]
