@@ -1,7 +1,7 @@
 Class {
 	#name : #ZlibTest,
 	#superclass : #AbstractZlibTest,
-	#category : #'C-API-Zlib'
+	#category : #'C-API-Zlib-Tests'
 }
 
 { #category : #run }
