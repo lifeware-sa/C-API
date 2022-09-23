@@ -22,10 +22,10 @@ Supported Smalltalk dialects:
 Metacello new
     baseline: 'CApi';
     repository: 'github://lifeware-sa/C-API';
-    load: 'ZLib'.
+    load: 'ZLib-Core'.
 ```
 
-### All libraries
+### All libraries + test cases
 
 ```Smalltalk
 Metacello new
@@ -49,7 +49,7 @@ To depend on a partial version of C-API, you may use:
 ```Smalltalk
 spec baseline: 'CApi' with: [
     spec
-        loads: #( 'ZLib' );
+        loads: #( 'ZLib-Core' );
         repository: 'github://lifeware-sa/C-API/src' ].
 ```
 
