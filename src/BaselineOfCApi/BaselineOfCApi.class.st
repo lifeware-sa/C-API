@@ -13,7 +13,7 @@ BaselineOfCApi >> baseline: spec [
 			spec baseline: 'LwCompatibilityLayer'
 				with: 
 					[spec
-						loads: #('LwTestCase' 'PlatformSpecific' 'SystemInterface' 'XFilename' 'Transcript' 'Timestamp' 'PackedString' 'NByteArray' 'Random');
+						loads: #('LwTestCase' 'PlatformSpecific' 'SystemInterface' 'XFilename' 'Transcript' 'Timestamp' 'NByteArray' 'Random');
 						repository: 'github://lifeware-sa/LwCompatibilityLayer/src'].
 			spec
 				package: 'C-API-Common' with: [spec requires: #('LwCompatibilityLayer')];
